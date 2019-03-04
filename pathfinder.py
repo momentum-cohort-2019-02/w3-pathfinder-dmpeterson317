@@ -3,7 +3,7 @@ from PIL import Image, ImageDraw
 class MapDataDrawer:
 
     def __init__(self, filename):
-        '''Reads in text file, places elevations into list, and finds highest and lowest elevations'''
+        '''Reads in text file, places elevations into list, finds highest and lowest elevations, finds color intensity, draws the map, and saves the img'''
         # self.elevations = []
         with open(filename) as file:
             self.elevations = [[int(e) for e in line.split()] for line in file]
